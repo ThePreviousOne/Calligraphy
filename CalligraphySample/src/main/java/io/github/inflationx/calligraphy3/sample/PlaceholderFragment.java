@@ -32,10 +32,10 @@ public class PlaceholderFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
-        ViewStub stub = ButterKnife.findById(view, R.id.stub);
+        ViewStub stub = view.findViewById(R.id.stub);
         stub.inflate();
 
-        ViewStub stubWithFontPath = ButterKnife.findById(view, R.id.stub_with_font_path);
+        ViewStub stubWithFontPath = view.findViewById(R.id.stub_with_font_path);
         stubWithFontPath.inflate();
     }
 

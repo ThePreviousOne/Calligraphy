@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Toolbar toolbar = findById(this, R.id.toolbar);
+        final Toolbar toolbar = View.findViewById(this, R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Inject pragmatically

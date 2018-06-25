@@ -232,7 +232,6 @@ class Calligraphy {
             toolbar.setSubtitle(BLANK);
         }
 
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
         @Override public void onGlobalLayout() {
             final Toolbar toolbar = mToolbarReference.get();
             final Context context = mContextRef.get();
@@ -255,12 +254,7 @@ class Calligraphy {
         }
 
         private void removeSelf(final Toolbar toolbar) {// Our dark deed is done
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-                //noinspection deprecation
-                toolbar.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-            } else {
                 toolbar.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-            }
         }
 
     }
